@@ -1,0 +1,129 @@
+                             *************************************************************
+                             *                                                            
+                             *  FUNCTION                                                  
+                             *************************************************************
+                             undefined  __stdcall  FUN_S_ITEM.BIN__8010c2c8 (undefined4
+                               assume gp = 0x8005a1d4
+             undefined         v0:1           <RETURN>
+             undefined4        a0:4           param_1
+             int               a1:4           param_2
+             char              a2:1           param_3
+             undefined4        Stack[-0x8]:4  local_8                                 XREF[2]:     S_ITEM.BIN::8010
+                                                                                                   S_ITEM.BIN::8010
+             undefined4        Stack[-0xc]:4  local_c                                 XREF[2]:     S_ITEM.BIN::8010
+                                                                                                   S_ITEM.BIN::8010
+             undefined4        Stack[-0x10]:4 local_10                                XREF[2]:     S_ITEM.BIN::8010
+                                                                                                   S_ITEM.BIN::8010
+                             FUN_S_ITEM.BIN__8010c2c8                        XREF[6]:     FUN_S_ITEM.BIN__8010a948:8010ac3
+                                                                                          FUN_S_ITEM.BIN__8010a948:8010ac6
+                                                                                          FUN_S_ITEM.BIN__8010a948:8010b5b
+                                                                                          FUN_S_ITEM.BIN__8010a948:8010b98
+                                                                                          FUN_S_ITEM.BIN__8010a948:8010bd3
+                                                                                          FUN_S_ITEM.BIN__8010a948:8010c20
+      ::8010c2c8 e0  ff  bd  27    addiu      sp,sp,-0x20
+             assume gp = <UNKNOWN>
+      ::8010c2cc 10  00  b0  af    sw         s0,local_10 (sp)
+      ::8010c2d0 21  80  a0  00    move       s0,param_2
+      ::8010c2d4 21  20  00  00    clear      param_1
+      ::8010c2d8 14  00  b1  af    sw         s1,local_c (sp)
+      ::8010c2dc 18  00  bf  af    sw         ra,local_8 (sp)
+      ::8010c2e0 ff  29  04  0c    jal        FUN_S_ITEM.BIN__8010a7fc                         int FUN_S_ITEM.BIN__8010a7fc(int
+      ::8010c2e4 21  88  c0  00    _move      s1,param_3
+      ::8010c2e8 04  00  07  24    li         a3,0x4
+      ::8010c2ec 02  00  42  24    addiu      v0,v0,0x2
+      ::8010c2f0 ff  ff  46  30    andi       param_3 ,v0,0xffff
+      ::8010c2f4 12  80  02  3c    lui        v0,0x8012
+      ::8010c2f8 02  00  00  16    bne        s0,zero ,LAB_S_ITEM.BIN__8010c304
+      ::8010c2fc a4  c6  44  24    _addiu     param_1 =>DAT_S_ITEM.BIN__8011c6a4 ,v0,-0x395c    = 20h     
+      ::8010c300 05  00  07  24    li         a3,0x5
+                             LAB_S_ITEM.BIN__8010c304                        XREF[1]:     S_ITEM.BIN::8010c2f8 (j)   
+      ::8010c304 a4  0f  04  0c    jal        renderCentredText                                undefined renderCentredText(shor
+      ::8010c308 48  00  05  24    _li        param_2 ,0x48
+      ::8010c30c ff  29  04  0c    jal        FUN_S_ITEM.BIN__8010a7fc                         int FUN_S_ITEM.BIN__8010a7fc(int
+      ::8010c310 01  00  04  24    _li        param_1 ,0x1
+      ::8010c314 02  00  42  24    addiu      v0,v0,0x2
+      ::8010c318 ff  ff  46  30    andi       param_3 ,v0,0xffff
+      ::8010c31c 12  80  02  3c    lui        v0,0x8012
+      ::8010c320 ac  c6  44  24    addiu      param_1 =>DAT_S_ITEM.BIN__8011c6ac ,v0,-0x3954    = 31h    1
+      ::8010c324 01  00  02  24    li         v0,0x1
+      ::8010c328 02  00  02  16    bne        s0,v0,LAB_S_ITEM.BIN__8010c334
+      ::8010c32c 04  00  07  24    _li        a3,0x4
+      ::8010c330 05  00  07  24    li         a3,0x5
+                             LAB_S_ITEM.BIN__8010c334                        XREF[1]:     S_ITEM.BIN::8010c328 (j)   
+      ::8010c334 a4  0f  04  0c    jal        renderCentredText                                undefined renderCentredText(shor
+      ::8010c338 48  00  05  24    _li        param_2 ,0x48
+      ::8010c33c ff  29  04  0c    jal        FUN_S_ITEM.BIN__8010a7fc                         int FUN_S_ITEM.BIN__8010a7fc(int
+      ::8010c340 02  00  04  24    _li        param_1 ,0x2
+      ::8010c344 02  00  42  24    addiu      v0,v0,0x2
+      ::8010c348 ff  ff  46  30    andi       param_3 ,v0,0xffff
+      ::8010c34c 12  80  02  3c    lui        v0,0x8012
+      ::8010c350 b8  c6  44  24    addiu      param_1 =>DAT_S_ITEM.BIN__8011c6b8 ,v0,-0x3948    = 21h    !
+      ::8010c354 02  00  02  24    li         v0,0x2
+      ::8010c358 02  00  02  16    bne        s0,v0,LAB_S_ITEM.BIN__8010c364
+      ::8010c35c 04  00  07  24    _li        a3,0x4
+      ::8010c360 05  00  07  24    li         a3,0x5
+                             LAB_S_ITEM.BIN__8010c364                        XREF[1]:     S_ITEM.BIN::8010c358 (j)   
+      ::8010c364 a4  0f  04  0c    jal        renderCentredText                                undefined renderCentredText(shor
+      ::8010c368 48  00  05  24    _li        param_2 ,0x48
+      ::8010c36c ff  29  04  0c    jal        FUN_S_ITEM.BIN__8010a7fc                         int FUN_S_ITEM.BIN__8010a7fc(int
+      ::8010c370 03  00  04  24    _li        param_1 ,0x3
+      ::8010c374 02  00  42  24    addiu      v0,v0,0x2
+      ::8010c378 ff  ff  46  30    andi       param_3 ,v0,0xffff
+      ::8010c37c 12  80  02  3c    lui        v0,0x8012
+      ::8010c380 c8  c6  44  24    addiu      param_1 =>DAT_S_ITEM.BIN__8011c6c8 ,v0,-0x3938    = 2Ah    *
+      ::8010c384 03  00  02  24    li         v0,0x3
+      ::8010c388 02  00  02  16    bne        s0,v0,LAB_S_ITEM.BIN__8010c394
+      ::8010c38c 04  00  07  24    _li        a3,0x4
+      ::8010c390 05  00  07  24    li         a3,0x5
+                             LAB_S_ITEM.BIN__8010c394                        XREF[1]:     S_ITEM.BIN::8010c388 (j)   
+      ::8010c394 a4  0f  04  0c    jal        renderCentredText                                undefined renderCentredText(shor
+      ::8010c398 48  00  05  24    _li        param_2 ,0x48
+      ::8010c39c ff  00  22  32    andi       v0,s1,0xff
+      ::8010c3a0 11  00  40  10    beq        v0,zero ,LAB_S_ITEM.BIN__8010c3e8
+      ::8010c3a4 69  00  04  24    _li        param_1 ,0x69
+      ::8010c3a8 24  00  05  24    li         param_2 ,0x24
+      ::8010c3ac 0c  80  02  3c    lui        v0,0x800c
+      ::8010c3b0 ae  ad  46  84    lh         param_3 ,-0x5252 (v0)=>DAT_800badae
+      ::8010c3b4 7f  1e  04  0c    jal        renderTwoDigitNumber                             undefined renderTwoDigitNumber(u
+      ::8010c3b8 02  00  07  24    _li        a3,0x2
+      ::8010c3bc 5e  00  04  24    li         param_1 ,0x5e
+      ::8010c3c0 10  00  05  24    li         param_2 ,0x10
+      ::8010c3c4 35  0e  04  0c    jal        FUN_S_ITEM.BIN__801038d4                         undefined FUN_S_ITEM.BIN__801038
+      ::8010c3c8 21  30  a0  00    _move      param_3 ,param_2
+      ::8010c3cc 7b  00  04  24    li         param_1 ,0x7b
+      ::8010c3d0 24  00  05  24    li         param_2 ,0x24
+      ::8010c3d4 20  00  06  24    li         param_3 ,0x20
+      ::8010c3d8 7f  1e  04  0c    jal        renderTwoDigitNumber                             undefined renderTwoDigitNumber(u
+      ::8010c3dc 02  00  07  24    _li        a3,0x2
+      ::8010c3e0 0a  31  04  08    j          LAB_S_ITEM.BIN__8010c428
+      ::8010c3e4 57  00  04  24    _li        param_1 ,0x57
+                             LAB_S_ITEM.BIN__8010c3e8                        XREF[1]:     S_ITEM.BIN::8010c3a0 (j)   
+      ::8010c3e8 5d  00  04  24    li         param_1 ,0x5d
+      ::8010c3ec 24  00  05  24    li         param_2 ,0x24
+      ::8010c3f0 0c  80  02  3c    lui        v0,0x800c
+      ::8010c3f4 ac  ad  46  84    lh         param_3 ,-0x5254 (v0)=>DAT_800badac
+      ::8010c3f8 d9  1d  04  0c    jal        renderThreeDigitNumber                           undefined renderThreeDigitNumber
+      ::8010c3fc 02  00  07  24    _li        a3,0x2
+      ::8010c400 5f  00  04  24    li         param_1 ,0x5f
+      ::8010c404 10  00  05  24    li         param_2 ,0x10
+      ::8010c408 35  0e  04  0c    jal        FUN_S_ITEM.BIN__801038d4                         undefined FUN_S_ITEM.BIN__801038
+      ::8010c40c 21  30  a0  00    _move      param_3 ,param_2
+      ::8010c410 75  00  04  24    li         param_1 ,0x75
+      ::8010c414 24  00  05  24    li         param_2 ,0x24
+      ::8010c418 ff  00  06  24    li         param_3 ,0xff
+      ::8010c41c d9  1d  04  0c    jal        renderThreeDigitNumber                           undefined renderThreeDigitNumber
+      ::8010c420 02  00  07  24    _li        a3,0x2
+      ::8010c424 57  00  04  24    li         param_1 ,0x57
+                             LAB_S_ITEM.BIN__8010c428                        XREF[1]:     S_ITEM.BIN::8010c3e0 (j)   
+      ::8010c428 18  00  05  24    li         param_2 ,0x18
+      ::8010c42c 0c  80  02  3c    lui        v0,0x800c
+      ::8010c430 5c  ac  46  8c    lw         param_3 ,-0x53a4 (v0)=>DAT_800bac5c
+      ::8010c434 cb  17  04  0c    jal        renderEightDigitNumber                           undefined renderEightDigitNumber
+      ::8010c438 02  00  07  24    _li        a3,0x2
+      ::8010c43c 0a  8f  00  0c    jal        uploadRenderables                                undefined uploadRenderables(void)
+      ::8010c440 00  00  00  00    _nop
+      ::8010c444 18  00  bf  8f    lw         ra,local_8 (sp)
+      ::8010c448 14  00  b1  8f    lw         s1,local_c (sp)
+      ::8010c44c 10  00  b0  8f    lw         s0,local_10 (sp)
+      ::8010c450 08  00  e0  03    jr         ra
+      ::8010c454 20  00  bd  27    _addiu     sp,sp,0x20
