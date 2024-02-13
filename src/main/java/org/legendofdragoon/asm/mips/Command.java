@@ -1,4 +1,4 @@
-package org.legendofdragoon.asm;
+package org.legendofdragoon.asm.mips;
 
 public class Command {
   public final long address;

@@ -1,4 +1,4 @@
-package org.legendofdragoon.asm;
+package org.legendofdragoon.asm.mips;
 
 public enum Ops {
   SLL(0x0, 0x0),

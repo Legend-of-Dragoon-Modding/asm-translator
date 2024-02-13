@@ -1,4 +1,4 @@
-package org.legendofdragoon.asm;
+package org.legendofdragoon.asm.mips;
 
 import java.util.ArrayList;
 import java.util.Collections;

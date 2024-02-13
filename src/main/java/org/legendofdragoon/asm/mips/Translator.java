@@ -1,4 +1,4 @@
-package org.legendofdragoon.asm;
+package org.legendofdragoon.asm.mips;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
@@ -214,7 +214,7 @@ public class Translator {
           yield
             "if((int)" + command.source().name + comp + Register.ZERO.name + ") {\n" +
             "  LAB_" + Long.toHexString(jump) + ";\n" +
-            "}";
+            '}';
         }
 
         case J -> {
@@ -245,7 +245,7 @@ public class Translator {
           yield
             "if(" + command.source().name + " == " + command.target().name + ") {\n" +
             "  LAB_" + Long.toHexString(jump) + ";\n" +
-            "}";
+            '}';
         }
 
         case BNE -> {
@@ -259,7 +259,7 @@ public class Translator {
           yield
             "if(" + command.source().name + " != " + command.target().name + ") {\n" +
             "  LAB_" + Long.toHexString(jump) + ";\n" +
-            "}";
+            '}';
         }
 
         case BLEZ -> {
@@ -272,7 +272,7 @@ public class Translator {
           yield
             "if((int)" + command.source().name + " <= " + Register.ZERO.name + ") {\n" +
             "  LAB_" + Long.toHexString(jump) + ";\n" +
-            "}";
+            '}';
         }
 
         case BGTZ -> {
@@ -285,7 +285,7 @@ public class Translator {
           yield
             "if((int)" + command.source().name + " > " + Register.ZERO.name + ") {\n" +
             "  LAB_" + Long.toHexString(jump) + ";\n" +
-            "}";
+            '}';
         }
 
         case ADDIU -> {
@@ -471,11 +471,11 @@ public class Translator {
       if(lastBranchType == BranchType.NONE) {
         lines.put(command.address, line);
       } else if(lastBranchType == BranchType.ALWAYS) {
-        lines.merge(command.address - 4, line, (current, added) -> added + "\n" + current);
+        lines.merge(command.address - 4, line, (current, added) -> added + '\n' + current);
       } else if(lastBranchType == BranchType.CONDITIONAL) {
         lines.merge(command.address - 4, line, (current, added) -> {
           final String[] split = current.split("\n");
-          return split[0] + "\n  " + added + "\n" + split[1] + "\n" + split[2] + "\n" + added;
+          return split[0] + "\n  " + added + '\n' + split[1] + '\n' + split[2] + '\n' + added;
         });
       }
 
@@ -484,7 +484,7 @@ public class Translator {
 
     // Prepend jump destinations
     for(final long address : labels) {
-      lines.merge(address, "\n//LAB_" + Long.toHexString(address), (current, added) -> added + "\n" + current);
+      lines.merge(address, "\n//LAB_" + Long.toHexString(address), (current, added) -> added + '\n' + current);
     }
 
     final List<String> output = new ArrayList<>();

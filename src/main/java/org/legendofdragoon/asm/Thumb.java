@@ -1,18 +1,20 @@
 package org.legendofdragoon.asm;
 
 import org.apache.logging.log4j.core.config.plugins.util.PluginManager;
+import org.legendofdragoon.asm.thumb.Asm;
+import org.legendofdragoon.asm.thumb.Translator;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public final class Main {
+public final class Thumb {
   static {
     System.setProperty("log4j.skipJansi", "false");
     PluginManager.addPackage("org.legendofdragoon.asm");
   }
 
-  private Main() { }
+  private Thumb() { }
 
   public static void main(final String[] args) throws IOException {
     final String input = Files.readString(Paths.get("input.txt"));
