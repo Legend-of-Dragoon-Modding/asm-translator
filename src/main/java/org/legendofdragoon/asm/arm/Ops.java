@@ -24,6 +24,8 @@ public enum Ops {
   BX,
   BLX,
 
+  SWI,
+
   MUL,
   MUL_LONG,
 
@@ -112,6 +114,10 @@ public enum Ops {
 
     if((command & 0xf000000) == 0xb000000) {
       return BL;
+    }
+
+    if((command & 0xf000000) == 0xf000000) {
+      return SWI;
     }
 
     if((command & 0xe000090) == 0x10) {

@@ -137,7 +137,8 @@ public enum Ops {
   BGT,
   /** THUMB16, branch if signed <= */
   BLE,
-
+  /** THUMB17, SWI */
+  SWI,
   /** THUMB18, branch */
   B,
   /** THUMB19, branch long with link (32-bit) */
@@ -148,7 +149,7 @@ public enum Ops {
 
   public static Ops get(final int command) {
     // THUMB2 (must be first)
-    if((command & 0xfc00) == 0x1c00) {
+    if((command & 0xf800) == 0x1800) {
       return values()[ADD_REG.ordinal() + (command >>> 9 & 0x3)];
     }
 
@@ -219,6 +220,11 @@ public enum Ops {
     // THUMB15
     if((command & 0xf000) == 0xc000) {
       return values()[STMIA.ordinal() + (command >>> 11 & 0x1)];
+    }
+
+    // THUMB17
+    if((command & 0xff00) == 0xdf00) {
+      return SWI;
     }
 
     // THUMB16

@@ -30,6 +30,14 @@ public enum Register {
     this.name = name;
   }
 
+  public String fullName() {
+    if(this.ordinal() < R8.ordinal()) {
+      return this.name;
+    }
+
+    return "CPU." + this.name + "().value";
+  }
+
   public static List<Register> unpack(final int packed) {
     final List<Register> registers = new ArrayList<>();
     for(final Register r : values()) {
